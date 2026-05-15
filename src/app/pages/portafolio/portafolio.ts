@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-portafolio',
-  imports: [],
+  imports: [RouterLink],
+    standalone:true,
   templateUrl: './portafolio.html',
   styleUrl: './portafolio.css',
 })

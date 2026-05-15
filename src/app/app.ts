@@ -1,17 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from "./shared/header/header";
-import { Footer } from "./shared/footer/footer";
-import { Portafolio } from "./pages/portafolio/portafolio";
-import { About } from "./pages/about/about";
-import { PortfolioItem } from "./pages/portfolio-item/portfolio-item";
+
+import { Header } from './shared/header/header';
+import { Footer } from './shared/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Portafolio, About, PortfolioItem],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [RouterOutlet, Header, Footer],
+  templateUrl: './app.html'
 })
-export class App {
-  protected readonly title = signal('CursoAngular');
-}
+export class App {}
