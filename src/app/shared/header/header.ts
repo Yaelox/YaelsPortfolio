@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { InfoPagina } from '../../services/info-pagina';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {}
+export class Header {
+
+  constructor(public _service: InfoPagina){}
+
+  ngOnInit(){
+
+  }
+}

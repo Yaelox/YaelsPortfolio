@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { InfoPagina } from '../../services/info-pagina';
 
 @Component({
   selector: 'app-footer',
@@ -10,4 +11,8 @@ import { RouterLink } from "@angular/router";
 export class Footer {
 
   anio: number = new Date().getFullYear();
+
+  constructor(public _service: InfoPagina){
+
+  }
 }
